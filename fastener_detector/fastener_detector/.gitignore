@@ -1,0 +1,27 @@
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Python cache / build
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+# Tools / IDE / OS
+.pytest_cache/
+.mypy_cache/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets and logs
+.env
+*.log
+
+# Raw dataset (large) - the prebuilt refs_cache.pkl is kept
+dataset/
+archive.zip

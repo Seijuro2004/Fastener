@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fastener Detector</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<main>
+  <header>
+    <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,3 42,13.5 42,34.5 24,45 6,34.5 6,13.5"/><circle cx="24" cy="24" r="8"/></svg>
+    <h1>Fastener Detector</h1>
+    <p>Upload a photo of a screw, bolt, nut or washer.</p>
+  </header>
+
+  <label id="drop" class="drop">
+    <input id="file" type="file" accept="image/*" hidden>
+    <img id="preview" alt="" hidden>
+    <span id="hint">Drop an image here or <u>browse</u></span>
+  </label>
+  <button id="go" disabled>Detect</button>
+  <p id="error" class="error" hidden></p>
+
+  <section id="result" hidden>
+    <div class="thread"></div>
+    <h2 id="label"></h2>
+    <p class="meta"><span id="conf"></span> · <span id="kp"></span></p>
+    <div class="imgs">
+      <figure><img id="annotated" alt=""><figcaption>Detected object</figcaption></figure>
+      <figure><img id="features" alt=""><figcaption>FAST keypoints</figcaption></figure>
+    </div>
+  </section>
+</main>
+<script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
